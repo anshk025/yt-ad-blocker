@@ -4,8 +4,6 @@
   "version": "1.0",
   "description": "Blocks ads on YouTube",
   "permissions": [
-    "activeTab",
-    "scripting",
     "storage",
     "contextMenus"
   ],
@@ -22,9 +20,6 @@
       ],
       "js": [
         "content.js"
-      ],
-      "css": [
-        "adblock.css"
       ],
       "run_at": "document_start"
     }

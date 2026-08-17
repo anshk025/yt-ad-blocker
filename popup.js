@@ -24,16 +24,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const isEnabled = toggleSwitch.checked;
     chrome.storage.sync.set({ adBlockerEnabled: isEnabled });
     updateStatusDisplay(isEnabled);
-    
-    // Send message to content script to update its behavior
-    chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-      if (tabs[0] && tabs[0].url.includes('youtube.com')) {
-        chrome.tabs.sendMessage(tabs[0].id, { 
-          type: 'TOGGLE_ADBLOCK', 
-          enabled: isEnabled 
-        });
-      }
-    });
   });
   
   function updateStatusDisplay(isEnabled) {

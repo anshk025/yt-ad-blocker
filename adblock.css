@@ -1,8 +1,6 @@
 /* YouTube Ad Blocker CSS */
 
-/* Hide video ads */
-.video-ads,
-.ytp-ad-module,
+/* Hide video ad overlays and banners */
 .ytp-ad-overlay-container,
 .ytp-ad-text-overlay,
 .ytp-ad-player-overlay,
